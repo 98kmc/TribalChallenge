@@ -15,9 +15,17 @@
 		83315D072B51CC92004652E8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D062B51CC92004652E8 /* Coordinator.swift */; };
 		83315D092B51CCB6004652E8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D082B51CCB6004652E8 /* Router.swift */; };
 		83315D0B2B51CCE5004652E8 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D0A2B51CCE5004652E8 /* AppTransition.swift */; };
-		83315D0F2B51CD58004652E8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D0E2B51CD58004652E8 /* HomeCoordinator.swift */; };
-		83315D182B51CDB9004652E8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83315D162B51CDB9004652E8 /* HomeViewController.xib */; };
-		83315D192B51CDB9004652E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D172B51CDB9004652E8 /* HomeViewController.swift */; };
+		83315D1E2B51D348004652E8 /* JokeRepositoryRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D1D2B51D348004652E8 /* JokeRepositoryRepresentable.swift */; };
+		83315D202B51D385004652E8 /* JokeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D1F2B51D385004652E8 /* JokeDTO.swift */; };
+		83315D222B51D3E2004652E8 /* JokeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D212B51D3E2004652E8 /* JokeRepository.swift */; };
+		83315D252B51D49C004652E8 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D242B51D49C004652E8 /* Joke.swift */; };
+		83315D282B51D4EE004652E8 /* JokeUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D272B51D4EE004652E8 /* JokeUseCases.swift */; };
+		83315D2A2B51D53F004652E8 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D292B51D53F004652E8 /* Failure.swift */; };
+		83315D3B2B51E8B7004652E8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D372B51E8B7004652E8 /* HomeViewModel.swift */; };
+		83315D3C2B51E8B7004652E8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83315D382B51E8B7004652E8 /* HomeViewController.xib */; };
+		83315D3D2B51E8B7004652E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D392B51E8B7004652E8 /* HomeViewController.swift */; };
+		83315D3E2B51E8B7004652E8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */; };
+		83315D402B51EE1D004652E8 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D3F2B51EE1D004652E8 /* LoadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +39,17 @@
 		83315D062B51CC92004652E8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		83315D082B51CCB6004652E8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		83315D0A2B51CCE5004652E8 /* AppTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
-		83315D0E2B51CD58004652E8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		83315D162B51CDB9004652E8 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		83315D172B51CDB9004652E8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		83315D1D2B51D348004652E8 /* JokeRepositoryRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeRepositoryRepresentable.swift; sourceTree = "<group>"; };
+		83315D1F2B51D385004652E8 /* JokeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDTO.swift; sourceTree = "<group>"; };
+		83315D212B51D3E2004652E8 /* JokeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeRepository.swift; sourceTree = "<group>"; };
+		83315D242B51D49C004652E8 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		83315D272B51D4EE004652E8 /* JokeUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeUseCases.swift; sourceTree = "<group>"; };
+		83315D292B51D53F004652E8 /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
+		83315D372B51E8B7004652E8 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		83315D382B51E8B7004652E8 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		83315D392B51E8B7004652E8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		83315D3F2B51EE1D004652E8 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,7 @@
 			children = (
 				83315D062B51CC92004652E8 /* Coordinator.swift */,
 				83315D082B51CCB6004652E8 /* Router.swift */,
+				83315D1D2B51D348004652E8 /* JokeRepositoryRepresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -92,6 +109,7 @@
 		83315D0C2B51CD3E004652E8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				83315D412B51F9A0004652E8 /* Utils */,
 				83315D052B51CC83004652E8 /* Protocols */,
 			);
 			path = Common;
@@ -100,24 +118,16 @@
 		83315D0D2B51CD49004652E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				83315D152B51CDB9004652E8 /* Home */,
+				83315D362B51E8B7004652E8 /* Home */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		83315D152B51CDB9004652E8 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				83315D0E2B51CD58004652E8 /* HomeCoordinator.swift */,
-				83315D172B51CDB9004652E8 /* HomeViewController.swift */,
-				83315D162B51CDB9004652E8 /* HomeViewController.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		83315D1A2B51D030004652E8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				83315D262B51D4BD004652E8 /* UseCases */,
+				83315D232B51D48D004652E8 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -125,6 +135,8 @@
 		83315D1B2B51D03E004652E8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				83315D1F2B51D385004652E8 /* JokeDTO.swift */,
+				83315D212B51D3E2004652E8 /* JokeRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -136,6 +148,42 @@
 				83315CFA2B51CC0F004652E8 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		83315D232B51D48D004652E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83315D242B51D49C004652E8 /* Joke.swift */,
+				83315D292B51D53F004652E8 /* Failure.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83315D262B51D4BD004652E8 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				83315D272B51D4EE004652E8 /* JokeUseCases.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		83315D362B51E8B7004652E8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				83315D372B51E8B7004652E8 /* HomeViewModel.swift */,
+				83315D382B51E8B7004652E8 /* HomeViewController.xib */,
+				83315D392B51E8B7004652E8 /* HomeViewController.swift */,
+				83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		83315D412B51F9A0004652E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				83315D3F2B51EE1D004652E8 /* LoadImage.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +246,7 @@
 			files = (
 				83315CFC2B51CC0F004652E8 /* LaunchScreen.storyboard in Resources */,
 				83315CF92B51CC0F004652E8 /* Assets.xcassets in Resources */,
-				83315D182B51CDB9004652E8 /* HomeViewController.xib in Resources */,
+				83315D3C2B51E8B7004652E8 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,13 +258,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				83315D042B51CC5E004652E8 /* App.swift in Sources */,
+				83315D3B2B51E8B7004652E8 /* HomeViewModel.swift in Sources */,
+				83315D3D2B51E8B7004652E8 /* HomeViewController.swift in Sources */,
 				83315D072B51CC92004652E8 /* Coordinator.swift in Sources */,
+				83315D2A2B51D53F004652E8 /* Failure.swift in Sources */,
+				83315D252B51D49C004652E8 /* Joke.swift in Sources */,
+				83315D202B51D385004652E8 /* JokeDTO.swift in Sources */,
 				83315CF02B51CC0D004652E8 /* AppDelegate.swift in Sources */,
+				83315D282B51D4EE004652E8 /* JokeUseCases.swift in Sources */,
 				83315D092B51CCB6004652E8 /* Router.swift in Sources */,
-				83315D192B51CDB9004652E8 /* HomeViewController.swift in Sources */,
-				83315D0F2B51CD58004652E8 /* HomeCoordinator.swift in Sources */,
 				83315CF22B51CC0D004652E8 /* SceneDelegate.swift in Sources */,
+				83315D222B51D3E2004652E8 /* JokeRepository.swift in Sources */,
 				83315D0B2B51CCE5004652E8 /* AppTransition.swift in Sources */,
+				83315D402B51EE1D004652E8 /* LoadImage.swift in Sources */,
+				83315D3E2B51E8B7004652E8 /* HomeCoordinator.swift in Sources */,
+				83315D1E2B51D348004652E8 /* JokeRepositoryRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

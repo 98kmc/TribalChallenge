@@ -1,22 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TribalChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="jokeImageView" destination="YDS-Zf-nMp" id="c8G-9F-tf1"/>
+                <outlet property="jokeTextLabel" destination="b20-Y2-Kp0" id="MMi-ah-uVY"/>
+                <outlet property="loadingIndicator" destination="wpd-NE-9sh" id="aBm-T0-npW"/>
+                <outlet property="nextButton" destination="16J-tK-ABX" id="4kz-rV-Vqg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-Zf-nMp">
+                    <rect key="frame" x="96.666666666666686" y="242" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="DQI-zb-Q8v"/>
+                        <constraint firstAttribute="height" constant="200" id="S3O-Jq-vMu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b20-Y2-Kp0">
+                    <rect key="frame" x="30" y="466" width="333" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="5wM-CE-PnD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="wpd-NE-9sh">
+                    <rect key="frame" x="166.66666666666666" y="396" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Db6-kD-Jwj"/>
+                        <constraint firstAttribute="width" constant="60" id="Dp6-cc-KoZ"/>
+                    </constraints>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16J-tK-ABX">
+                    <rect key="frame" x="121.66666666666669" y="613" width="150" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="0KB-en-R0K"/>
+                        <constraint firstAttribute="height" constant="35" id="cRg-Io-Jer"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemIndigoColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                    <connections>
+                        <action selector="onNextButtonClick:" destination="-1" eventType="touchUpInside" id="97F-ry-xaC"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="16J-tK-ABX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b20-Y2-Kp0" secondAttribute="bottom" constant="8" id="62K-bj-dQN"/>
+                <constraint firstItem="YDS-Zf-nMp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="183" id="8WJ-8n-1Lm"/>
+                <constraint firstItem="wpd-NE-9sh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAp-Rm-Cyc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="16J-tK-ABX" secondAttribute="bottom" constant="170" id="Hul-U5-oym"/>
+                <constraint firstItem="wpd-NE-9sh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JEH-Uf-GWt"/>
+                <constraint firstItem="YDS-Zf-nMp" firstAttribute="trailing" secondItem="b20-Y2-Kp0" secondAttribute="trailing" priority="999" id="JKB-Y8-7J8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="b20-Y2-Kp0" secondAttribute="trailing" constant="30" id="Mel-US-iTo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="b20-Y2-Kp0" secondAttribute="bottom" priority="999" constant="348" id="WQE-xf-Kib"/>
+                <constraint firstItem="16J-tK-ABX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wfj-3g-340"/>
+                <constraint firstItem="YDS-Zf-nMp" firstAttribute="leading" secondItem="b20-Y2-Kp0" secondAttribute="leading" priority="999" id="dhk-hE-YbA"/>
+                <constraint firstItem="YDS-Zf-nMp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ksw-3Z-nNQ"/>
+                <constraint firstItem="b20-Y2-Kp0" firstAttribute="top" secondItem="YDS-Zf-nMp" secondAttribute="bottom" constant="24" id="lPb-6G-Q1t"/>
+                <constraint firstItem="b20-Y2-Kp0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="mlF-Rz-RXO"/>
+            </constraints>
+            <point key="canvasLocation" x="-517" y="-75"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
