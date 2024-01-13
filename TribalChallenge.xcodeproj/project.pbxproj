@@ -26,6 +26,8 @@
 		83315D3D2B51E8B7004652E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D392B51E8B7004652E8 /* HomeViewController.swift */; };
 		83315D3E2B51E8B7004652E8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */; };
 		83315D402B51EE1D004652E8 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D3F2B51EE1D004652E8 /* LoadImage.swift */; };
+		83315D452B5216F1004652E8 /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D432B5216F1004652E8 /* SearchJokeViewController.swift */; };
+		83315D462B5216F1004652E8 /* SearchJokeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83315D442B5216F1004652E8 /* SearchJokeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		83315D392B51E8B7004652E8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		83315D3F2B51EE1D004652E8 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
+		83315D432B5216F1004652E8 /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
+		83315D442B5216F1004652E8 /* SearchJokeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchJokeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 		83315D362B51E8B7004652E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				83315D422B5216C8004652E8 /* SearchBottomSheet */,
 				83315D372B51E8B7004652E8 /* HomeViewModel.swift */,
 				83315D382B51E8B7004652E8 /* HomeViewController.xib */,
 				83315D392B51E8B7004652E8 /* HomeViewController.swift */,
@@ -184,6 +189,15 @@
 				83315D3F2B51EE1D004652E8 /* LoadImage.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		83315D422B5216C8004652E8 /* SearchBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				83315D432B5216F1004652E8 /* SearchJokeViewController.swift */,
+				83315D442B5216F1004652E8 /* SearchJokeViewController.xib */,
+			);
+			path = SearchBottomSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +261,7 @@
 				83315CFC2B51CC0F004652E8 /* LaunchScreen.storyboard in Resources */,
 				83315CF92B51CC0F004652E8 /* Assets.xcassets in Resources */,
 				83315D3C2B51E8B7004652E8 /* HomeViewController.xib in Resources */,
+				83315D462B5216F1004652E8 /* SearchJokeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +280,7 @@
 				83315D252B51D49C004652E8 /* Joke.swift in Sources */,
 				83315D202B51D385004652E8 /* JokeDTO.swift in Sources */,
 				83315CF02B51CC0D004652E8 /* AppDelegate.swift in Sources */,
+				83315D452B5216F1004652E8 /* SearchJokeViewController.swift in Sources */,
 				83315D282B51D4EE004652E8 /* JokeUseCases.swift in Sources */,
 				83315D092B51CCB6004652E8 /* Router.swift in Sources */,
 				83315CF22B51CC0D004652E8 /* SceneDelegate.swift in Sources */,

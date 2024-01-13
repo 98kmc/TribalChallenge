@@ -11,24 +11,30 @@ enum HomeViewState {
     case loading
     case loaded
 }
+
+protocol HomeViewModelDelegate {
+    
+    func presentSearchSheet()
+}
+
 final class HomeViewModel {
     
     let useCases: JokeUseCases
+    let coordinator: HomeViewModelDelegate
     
     var viewStateDidChange: ((HomeViewState) -> Void)?
-    
     var currentJoke: Joke!
-    
     var selectedCategory: JokeCategory = .unknown
-    
+
     var state = HomeViewState.loading {
         didSet {
           viewStateDidChange?(state)
         }
     }
     
-    init(useCases: JokeUseCases) {
+    init(useCases: JokeUseCases, coordinator: HomeViewModelDelegate) {
         self.useCases = useCases
+        self.coordinator = coordinator
     }
     
     func didTapNext() {
@@ -39,6 +45,10 @@ final class HomeViewModel {
                 await loadNewJoke()
             }
         }
+    }
+    
+    func didTapSearch() {
+        coordinator.presentSearchSheet()
     }
     
     func didSelectCategory(category: JokeCategory) {

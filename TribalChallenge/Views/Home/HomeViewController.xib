@@ -18,6 +18,7 @@
                 <outlet property="jokeTextLabel" destination="b20-Y2-Kp0" id="MMi-ah-uVY"/>
                 <outlet property="loadingIndicator" destination="wpd-NE-9sh" id="aBm-T0-npW"/>
                 <outlet property="nextButton" destination="16J-tK-ABX" id="4kz-rV-Vqg"/>
+                <outlet property="searchButton" destination="jkL-A5-z3E" id="xN9-Vu-bbm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -85,6 +86,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkL-A5-z3E">
+                    <rect key="frame" x="20" y="92" width="50" height="35"/>
+                    <color key="tintColor" systemColor="systemIndigoColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                    <connections>
+                        <action selector="didTapSearchButton:" destination="-1" eventType="touchUpInside" id="Vmg-UU-y7m"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,6 +108,8 @@
                 <constraint firstItem="wpd-NE-9sh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JEH-Uf-GWt"/>
                 <constraint firstItem="YDS-Zf-nMp" firstAttribute="trailing" secondItem="b20-Y2-Kp0" secondAttribute="trailing" priority="999" id="JKB-Y8-7J8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="b20-Y2-Kp0" secondAttribute="trailing" constant="30" id="Mel-US-iTo"/>
+                <constraint firstItem="jkL-A5-z3E" firstAttribute="centerY" secondItem="6dw-WZ-duW" secondAttribute="centerY" id="T0Y-5c-LAD"/>
+                <constraint firstItem="jkL-A5-z3E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TKA-jp-YgZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="b20-Y2-Kp0" secondAttribute="bottom" priority="999" constant="348" id="WQE-xf-Kib"/>
                 <constraint firstItem="16J-tK-ABX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wfj-3g-340"/>
                 <constraint firstItem="6dw-WZ-duW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Y7U-Kd-1bE"/>
@@ -111,6 +123,7 @@
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

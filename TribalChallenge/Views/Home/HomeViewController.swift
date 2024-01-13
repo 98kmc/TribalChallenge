@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var categoriesPopUpButton: UIButton!
     @IBOutlet private weak var categorySelectionLabel: UILabel!
+    @IBOutlet private weak var searchButton: UIButton!
     
     var viewModel: HomeViewModel
     
@@ -66,6 +67,10 @@ class HomeViewController: UIViewController {
         viewModel.didTapNext()
     }
     
+    @IBAction func didTapSearchButton(_ sender: UIButton) {
+        viewModel.didTapSearch()
+    }
+    
     // MARK: Private Methods
     private func setUpViews(hidden: Bool = false, image: UIImage? = nil, text: String = "") {
         self.categorySelectionLabel.isHidden = hidden
@@ -90,6 +95,5 @@ class HomeViewController: UIViewController {
         
         categoriesPopUpButton.showsMenuAsPrimaryAction = true
         categoriesPopUpButton.changesSelectionAsPrimaryAction = true
-        
     }
 }

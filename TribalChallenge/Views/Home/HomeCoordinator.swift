@@ -21,9 +21,15 @@ final class HomeCoordinator<R: AppRouter> : Coordinator {
     
     func start() {
         
-            let homeViewModel = HomeViewModel(useCases: usecases)
+            let homeViewModel = HomeViewModel(useCases: usecases, coordinator: self)
             let vc = HomeViewController(viewModel: homeViewModel)
             router.navigationController.pushViewController(vc, animated: false)
+    }
+}
+
+extension HomeCoordinator: HomeViewModelDelegate {
+    func presentSearchSheet() {
+        router.navigationController.present(SearchJokeViewController(), animated: true)
     }
 }
 
