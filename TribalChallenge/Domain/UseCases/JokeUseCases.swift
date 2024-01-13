@@ -14,11 +14,14 @@ final class JokeUseCases {
         self.repository = repository
     }
     
-    func getSingleJoke() async -> Result<Joke, Failure> {
+    func getSingleJoke(with category: JokeCategory) async -> Result<Joke, Failure> {
         
         do {
             
-            let result = try await repository.fetchJoke()
+            let result = category != .unknown
+            ? try await repository.fetchJokeWithCategory(category.rawValue)
+            : try await repository.fetchJoke()
+            
             guard let jokesData = result else { return .failure(.apiError("Fetched Data is Null")) }
             
             return .success(jokesData.toJokeObject())

@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum JokeCategory: String {
+enum JokeCategory: String, CaseIterable {
+    case unknown = "All"
     case animal
     case career
     case celebrity
@@ -24,10 +25,9 @@ enum JokeCategory: String {
     case science
     case sport
     case travel
-    case unknown
 }
 
-struct Joke: Identifiable {
+struct Joke: Identifiable, Equatable {
     let categories: [JokeCategory]
     let created_at: String
     let icon_url: String
