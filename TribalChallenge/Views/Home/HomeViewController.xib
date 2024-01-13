@@ -75,7 +75,9 @@
                             <command title="Item 2" id="otN-20-XnS"/>
                         </children>
                     </menu>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" systemColor="systemIndigoColor"/>
+                    </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I just wanna see jokes of: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dw-WZ-duW">
                     <rect key="frame" x="85" y="99" width="194" height="21"/>
