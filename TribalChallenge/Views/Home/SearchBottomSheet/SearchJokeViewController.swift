@@ -54,6 +54,8 @@ class SearchJokeViewController: UIViewController {
                 
                 DispatchQueue.main.sync {
                     viewModel.clearResults()
+                    self.emptyDataView.isHidden = true
+                    self.collectionViewContainer.isHidden = true
                     self.loadingIndicator.isHidden = false
                     self.loadingIndicator.startAnimating()
                 }
@@ -72,13 +74,14 @@ class SearchJokeViewController: UIViewController {
     private func setUpViews() {
         
         searchBar.text = ""
-        self.loadingIndicator.isHidden = true
+        loadingIndicator.isHidden = true
         collectionViewContainer.isHidden = true
         emptyDataView.isHidden = true
     }
     
     private func showEmptyData() {
         Task {
+
             await MainActor.run {
                 loadingIndicator.isHidden = true
                 collectionViewContainer.isHidden = true

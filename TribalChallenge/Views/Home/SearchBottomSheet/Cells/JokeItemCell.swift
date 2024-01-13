@@ -24,7 +24,10 @@ class JokeItemCell: UICollectionViewCell {
         jokeDateLabel.text = "Date: " + item.created_at
         
         Task {
-            jokeImageView.image = await fetchImage(from: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FTribalLatAm%2F&psig=AOvVaw2VZt82RWYHkzRemCIDbPHx&ust=1705201489397000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjH6Nyw2YMDFQAAAAAdAAAAABAD")
+            let image = await fetchImage(from: item.icon_url)
+            await MainActor.run {
+                jokeImageView.image = image ?? UIImage(named: "placeholder")
+            }
         }
     }
 }
