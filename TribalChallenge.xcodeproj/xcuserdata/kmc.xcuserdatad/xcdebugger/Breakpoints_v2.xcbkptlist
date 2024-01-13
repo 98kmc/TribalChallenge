@@ -3,4 +3,130 @@
    uuid = "DF710A1A-E5BD-46A1-8FF0-1FEF23D1AB05"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TribalChallenge/Views/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C - dfc9e5c8f8322112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (TribalChallenge.HomeViewState) -&gt; () in TribalChallenge.HomeViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "TribalChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kmc/Developer/TribalChallenge/TribalChallenge/Views/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C - b9415e38d041e621"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (TribalChallenge.HomeViewState) -&gt; () in TribalChallenge.HomeViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "TribalChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kmc/Developer/TribalChallenge/TribalChallenge/Views/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C - 4cc4ae545e5b6510"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (TribalChallenge.HomeViewState) -&gt; () in TribalChallenge.HomeViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "TribalChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kmc/Developer/TribalChallenge/TribalChallenge/Views/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C - 25a7cba6a7d3cf7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in closure #1 (TribalChallenge.HomeViewState) -&gt; () in TribalChallenge.HomeViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "TribalChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kmc/Developer/TribalChallenge/TribalChallenge/Views/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C - 25a7cba6a7d3cef6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in closure #1 (TribalChallenge.HomeViewState) -&gt; () in TribalChallenge.HomeViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "TribalChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kmc/Developer/TribalChallenge/TribalChallenge/Views/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "EF3A9BD1-8FDD-4D29-8AE2-15B60914C03C - 25a7cba6a7d3cd28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in closure #1 (TribalChallenge.HomeViewState) -&gt; () in TribalChallenge.HomeViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "TribalChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kmc/Developer/TribalChallenge/TribalChallenge/Views/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79297DE7-941E-43A6-856D-1397F5C118CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TribalChallenge/Views/Home/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "loadNewJoke()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -9,10 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet private var jokeImageView: UIImageView!
-    @IBOutlet private var jokeTextLabel: UILabel!
-    @IBOutlet private var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet private var nextButton: UIButton!
+    @IBOutlet private weak var jokeImageView: UIImageView!
+    @IBOutlet private weak var jokeTextLabel: UILabel!
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var categoriesPopUpButton: UIButton!
+    @IBOutlet private weak var categorySelectionLabel: UILabel!
     
     var viewModel: HomeViewModel
     
@@ -38,8 +40,9 @@ class HomeViewController: UIViewController {
                 switch state {
                 case .loading:
                     await MainActor.run {
-                        resetViews()
+                        setUpViews(hidden: true)
                         self.view.backgroundColor = .white.withAlphaComponent(0.85)
+                        self.loadingIndicator.isHidden = false
                         self.loadingIndicator.startAnimating()
                     }
                 case .loaded:
@@ -48,16 +51,15 @@ class HomeViewController: UIViewController {
                         self.view.backgroundColor = .white
                         self.loadingIndicator.stopAnimating()
                         self.loadingIndicator.isHidden = true
-                        self.nextButton.isHidden = false
-                        self.jokeImageView.image = image ?? UIImage(named: "placeholder")
-                        self.jokeTextLabel.text = viewModel.currentJoke.value
+                        setUpViews(image: image ?? UIImage(named: "placeholder"), text: viewModel.currentJoke.value)
                     }
                     
                 }
             }
         }
         
-        viewModel.didAppear()
+        setUpCategoriesButton()
+        viewModel.didTapNext()
     }
     
     @IBAction func onNextButtonClick(_ sender: UIView) {
@@ -65,10 +67,29 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: Private Methods
-    private func resetViews() {
-        self.jokeImageView.image = nil
-        self.jokeTextLabel.text = ""
-        self.nextButton.isHidden = true
-        self.loadingIndicator.isHidden = false
+    private func setUpViews(hidden: Bool = false, image: UIImage? = nil, text: String = "") {
+        self.categorySelectionLabel.isHidden = hidden
+        self.categoriesPopUpButton.isHidden = hidden
+        self.jokeImageView.image = image
+        self.jokeTextLabel.text = text
+        self.nextButton.isHidden = hidden
+    }
+    
+    private func setUpCategoriesButton() {
+        
+        let onMenuItemClick = { (item: UIAction) in
+            self.viewModel.didSelectCategory(category: JokeCategory(rawValue: item.title) ?? .unknown)
+        }
+
+        var categoriesMenu: [UIMenuElement] = []
+        for category in JokeCategory.allCases.map({ $0.rawValue }) {
+            categoriesMenu.append(UIAction(title: category, handler: onMenuItemClick))
+        }
+        
+        categoriesPopUpButton.menu = UIMenu(options: .displayInline, children: categoriesMenu)
+        
+        categoriesPopUpButton.showsMenuAsPrimaryAction = true
+        categoriesPopUpButton.changesSelectionAsPrimaryAction = true
+        
     }
 }
