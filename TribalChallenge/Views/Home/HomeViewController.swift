@@ -17,11 +17,11 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var categorySelectionLabel: UILabel!
     @IBOutlet private weak var searchButton: UIButton!
     
-    var viewModel: HomeViewModel
+    var viewModel: HomeViewModelRepresentable
     
     
     // MARK: Initializers
-    init(viewModel: HomeViewModel) {
+    init(viewModel: HomeViewModelRepresentable) {
         self.viewModel = viewModel
         super.init(nibName: "HomeViewController",
                    bundle: Bundle(for: HomeViewController.self))
@@ -63,6 +63,8 @@ class HomeViewController: UIViewController {
         viewModel.didTapNext()
     }
     
+    
+    // MARK: Actions
     @IBAction func onNextButtonClick(_ sender: UIView) {
         viewModel.didTapNext()
     }
@@ -78,6 +80,7 @@ class HomeViewController: UIViewController {
         self.jokeImageView.image = image
         self.jokeTextLabel.text = text
         self.nextButton.isHidden = hidden
+        self.searchButton.isHidden = hidden
     }
     
     private func setUpCategoriesButton() {

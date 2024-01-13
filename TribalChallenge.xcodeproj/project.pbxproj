@@ -28,6 +28,7 @@
 		83315D402B51EE1D004652E8 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D3F2B51EE1D004652E8 /* LoadImage.swift */; };
 		83315D452B5216F1004652E8 /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D432B5216F1004652E8 /* SearchJokeViewController.swift */; };
 		83315D462B5216F1004652E8 /* SearchJokeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83315D442B5216F1004652E8 /* SearchJokeViewController.xib */; };
+		83315D482B521BCF004652E8 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D472B521BCF004652E8 /* HomeProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		83315D3F2B51EE1D004652E8 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		83315D432B5216F1004652E8 /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
 		83315D442B5216F1004652E8 /* SearchJokeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchJokeViewController.xib; sourceTree = "<group>"; };
+		83315D472B521BCF004652E8 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				83315D382B51E8B7004652E8 /* HomeViewController.xib */,
 				83315D392B51E8B7004652E8 /* HomeViewController.swift */,
 				83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */,
+				83315D472B521BCF004652E8 /* HomeProtocols.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				83315D3B2B51E8B7004652E8 /* HomeViewModel.swift in Sources */,
 				83315D3D2B51E8B7004652E8 /* HomeViewController.swift in Sources */,
 				83315D072B51CC92004652E8 /* Coordinator.swift in Sources */,
+				83315D482B521BCF004652E8 /* HomeProtocols.swift in Sources */,
 				83315D2A2B51D53F004652E8 /* Failure.swift in Sources */,
 				83315D252B51D49C004652E8 /* Joke.swift in Sources */,
 				83315D202B51D385004652E8 /* JokeDTO.swift in Sources */,

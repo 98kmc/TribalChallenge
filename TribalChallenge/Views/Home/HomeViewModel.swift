@@ -12,11 +12,6 @@ enum HomeViewState {
     case loaded
 }
 
-protocol HomeViewModelDelegate {
-    
-    func presentSearchSheet()
-}
-
 final class HomeViewModel {
     
     let useCases: JokeUseCases
@@ -37,6 +32,23 @@ final class HomeViewModel {
         self.coordinator = coordinator
     }
     
+    private func loadNewJoke() async {
+        state = .loading
+        let data = await useCases.getSingleJoke(with: selectedCategory)
+        
+        switch data {
+        case .success(let joke):
+            currentJoke = joke
+            print(joke)
+            state = .loaded
+        case .failure(let error):
+            print(error)
+        }
+    }
+}
+
+extension HomeViewModel: HomeViewModelRepresentable {
+    
     func didTapNext() {
         let lastJoke = currentJoke
         
@@ -54,18 +66,8 @@ final class HomeViewModel {
     func didSelectCategory(category: JokeCategory) {
         selectedCategory = category
     }
+}
+
+extension HomeViewModel: SearchViewModelRepresentable {
     
-    private func loadNewJoke() async {
-        state = .loading
-        let data = await useCases.getSingleJoke(with: selectedCategory)
-        
-        switch data {
-        case .success(let joke):
-            currentJoke = joke
-            print(joke)
-            state = .loaded
-        case .failure(let error):
-            print(error)
-        }
-    }
 }

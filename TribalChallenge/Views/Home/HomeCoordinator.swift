@@ -12,6 +12,7 @@ final class HomeCoordinator<R: AppRouter> : Coordinator {
     private let router: R
     private let repository: JokeRepository
     private let usecases: JokeUseCases
+    private lazy var homeViewModel: HomeViewModel = HomeViewModel(useCases: usecases, coordinator: self)
     
     init(router: R) {
         self.router = router
@@ -21,15 +22,14 @@ final class HomeCoordinator<R: AppRouter> : Coordinator {
     
     func start() {
         
-            let homeViewModel = HomeViewModel(useCases: usecases, coordinator: self)
-            let vc = HomeViewController(viewModel: homeViewModel)
-            router.navigationController.pushViewController(vc, animated: false)
+        let vc = HomeViewController(viewModel: homeViewModel)
+        router.navigationController.pushViewController(vc, animated: false)
     }
 }
 
 extension HomeCoordinator: HomeViewModelDelegate {
     func presentSearchSheet() {
-        router.navigationController.present(SearchJokeViewController(), animated: true)
+        router.navigationController.present(SearchJokeViewController(viewModel: homeViewModel), animated: true)
     }
 }
 
