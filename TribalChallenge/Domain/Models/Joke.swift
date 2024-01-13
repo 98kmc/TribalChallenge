@@ -27,7 +27,7 @@ enum JokeCategory: String, CaseIterable {
     case travel
 }
 
-struct Joke: Identifiable, Equatable {
+struct Joke: Identifiable, Equatable, Hashable {
     let categories: [JokeCategory]
     let created_at: String
     let icon_url: String

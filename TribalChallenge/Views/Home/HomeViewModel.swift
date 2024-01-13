@@ -17,13 +17,22 @@ final class HomeViewModel {
     let useCases: JokeUseCases
     let coordinator: HomeViewModelDelegate
     
+    var state = HomeViewState.loading {
+        didSet {
+            viewStateDidChange?(state)
+        }
+    }
+    
+    // HomeViewModelRepresentable
     var viewStateDidChange: ((HomeViewState) -> Void)?
     var currentJoke: Joke!
     var selectedCategory: JokeCategory = .unknown
-
-    var state = HomeViewState.loading {
+    
+    // SearchViewModelRepresentable
+    var searchResultDidChange: (([Joke]) -> Void)?
+    private var results: [Joke] = [] {
         didSet {
-          viewStateDidChange?(state)
+            searchResultDidChange?(results)
         }
     }
     
@@ -69,5 +78,24 @@ extension HomeViewModel: HomeViewModelRepresentable {
 }
 
 extension HomeViewModel: SearchViewModelRepresentable {
+
+    func search(text: String) {
+        
+        Task {
+            state = .loading
+            let data = await useCases.searchJokes(text: text)
+            
+            switch data {
+            case .success(let jokeList):
+                results = jokeList
+                state = .loaded
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
+    func clearResults() {
+        results = []
+    }
 }

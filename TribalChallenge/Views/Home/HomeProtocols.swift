@@ -10,7 +10,7 @@ import Foundation
 protocol HomeViewModelRepresentable {
     
     var viewStateDidChange: ((HomeViewState) -> Void)? { get set }
-    var currentJoke: Joke! { get set }
+    var currentJoke: Joke! { get }
     
     func didTapNext()
     
@@ -21,6 +21,12 @@ protocol HomeViewModelRepresentable {
 
 protocol SearchViewModelRepresentable {
     
+    var viewStateDidChange: ((HomeViewState) -> Void)? { get set }
+    var searchResultDidChange: (([Joke]) -> Void)? { get set }
+    
+    func search(text: String)
+    
+    func clearResults()
 }
 
 protocol HomeViewModelDelegate {

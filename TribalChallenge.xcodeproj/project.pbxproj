@@ -29,6 +29,9 @@
 		83315D452B5216F1004652E8 /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D432B5216F1004652E8 /* SearchJokeViewController.swift */; };
 		83315D462B5216F1004652E8 /* SearchJokeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83315D442B5216F1004652E8 /* SearchJokeViewController.xib */; };
 		83315D482B521BCF004652E8 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D472B521BCF004652E8 /* HomeProtocols.swift */; };
+		83315D4C2B522BF8004652E8 /* JokeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D4A2B522BF8004652E8 /* JokeItemCell.swift */; };
+		83315D4D2B522BF8004652E8 /* JokeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83315D4B2B522BF8004652E8 /* JokeItemCell.xib */; };
+		83315D4F2B523D01004652E8 /* JokeListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83315D4E2B523D01004652E8 /* JokeListResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		83315D432B5216F1004652E8 /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
 		83315D442B5216F1004652E8 /* SearchJokeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchJokeViewController.xib; sourceTree = "<group>"; };
 		83315D472B521BCF004652E8 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		83315D4A2B522BF8004652E8 /* JokeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeItemCell.swift; sourceTree = "<group>"; };
+		83315D4B2B522BF8004652E8 /* JokeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeItemCell.xib; sourceTree = "<group>"; };
+		83315D4E2B523D01004652E8 /* JokeListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeListResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 			children = (
 				83315D1F2B51D385004652E8 /* JokeDTO.swift */,
 				83315D212B51D3E2004652E8 /* JokeRepository.swift */,
+				83315D4E2B523D01004652E8 /* JokeListResponseDTO.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -177,11 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				83315D422B5216C8004652E8 /* SearchBottomSheet */,
-				83315D372B51E8B7004652E8 /* HomeViewModel.swift */,
-				83315D382B51E8B7004652E8 /* HomeViewController.xib */,
-				83315D392B51E8B7004652E8 /* HomeViewController.swift */,
 				83315D3A2B51E8B7004652E8 /* HomeCoordinator.swift */,
 				83315D472B521BCF004652E8 /* HomeProtocols.swift */,
+				83315D372B51E8B7004652E8 /* HomeViewModel.swift */,
+				83315D392B51E8B7004652E8 /* HomeViewController.swift */,
+				83315D382B51E8B7004652E8 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -197,10 +204,20 @@
 		83315D422B5216C8004652E8 /* SearchBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				83315D492B522BCC004652E8 /* Cells */,
 				83315D432B5216F1004652E8 /* SearchJokeViewController.swift */,
 				83315D442B5216F1004652E8 /* SearchJokeViewController.xib */,
 			);
 			path = SearchBottomSheet;
+			sourceTree = "<group>";
+		};
+		83315D492B522BCC004652E8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83315D4A2B522BF8004652E8 /* JokeItemCell.swift */,
+				83315D4B2B522BF8004652E8 /* JokeItemCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +280,7 @@
 			files = (
 				83315CFC2B51CC0F004652E8 /* LaunchScreen.storyboard in Resources */,
 				83315CF92B51CC0F004652E8 /* Assets.xcassets in Resources */,
+				83315D4D2B522BF8004652E8 /* JokeItemCell.xib in Resources */,
 				83315D3C2B51E8B7004652E8 /* HomeViewController.xib in Resources */,
 				83315D462B5216F1004652E8 /* SearchJokeViewController.xib in Resources */,
 			);
@@ -280,6 +298,7 @@
 				83315D3D2B51E8B7004652E8 /* HomeViewController.swift in Sources */,
 				83315D072B51CC92004652E8 /* Coordinator.swift in Sources */,
 				83315D482B521BCF004652E8 /* HomeProtocols.swift in Sources */,
+				83315D4C2B522BF8004652E8 /* JokeItemCell.swift in Sources */,
 				83315D2A2B51D53F004652E8 /* Failure.swift in Sources */,
 				83315D252B51D49C004652E8 /* Joke.swift in Sources */,
 				83315D202B51D385004652E8 /* JokeDTO.swift in Sources */,
@@ -289,6 +308,7 @@
 				83315D092B51CCB6004652E8 /* Router.swift in Sources */,
 				83315CF22B51CC0D004652E8 /* SceneDelegate.swift in Sources */,
 				83315D222B51D3E2004652E8 /* JokeRepository.swift in Sources */,
+				83315D4F2B523D01004652E8 /* JokeListResponseDTO.swift in Sources */,
 				83315D0B2B51CCE5004652E8 /* AppTransition.swift in Sources */,
 				83315D402B51EE1D004652E8 /* LoadImage.swift in Sources */,
 				83315D3E2B51E8B7004652E8 /* HomeCoordinator.swift in Sources */,

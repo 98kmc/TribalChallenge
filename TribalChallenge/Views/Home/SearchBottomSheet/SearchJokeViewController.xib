@@ -11,9 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchJokeViewController" customModule="TribalChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="collectionViewContainer" destination="Dig-De-Mtc" id="l4Q-QG-Rzm"/>
                 <outlet property="emptyDataView" destination="hhd-5m-dix" id="ewD-Xd-nGw"/>
+                <outlet property="loadingIndicator" destination="8m6-5O-0ye" id="zPr-v4-A5u"/>
                 <outlet property="searchBar" destination="bwy-y6-Ljh" id="pnK-cn-ShW"/>
-                <outlet property="searchResultsCollectionView" destination="VwA-LO-epF" id="9fA-I2-BBb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bwy-y6-Ljh">
-                    <rect key="frame" x="37" y="99" width="320" height="56"/>
+                    <rect key="frame" x="36.666666666666657" y="99" width="320" height="56"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="320" id="Dmh-tI-xEz"/>
                     </constraints>
@@ -32,17 +33,18 @@
                         <outlet property="delegate" destination="-1" id="eja-T0-0J3"/>
                     </connections>
                 </searchBar>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VwA-LO-epF">
-                    <rect key="frame" x="24" y="195" width="345" height="603"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sqm-8e-94p">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhd-5m-dix">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dig-De-Mtc" userLabel="CollectionViewContainer">
+                    <rect key="frame" x="24" y="195" width="345" height="599"/>
+                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8m6-5O-0ye">
+                    <rect key="frame" x="176.66666666666666" y="406" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="cWD-f3-C8e"/>
+                        <constraint firstAttribute="height" constant="40" id="tSm-Ds-VMM"/>
+                    </constraints>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhd-5m-dix" userLabel="EmptyDataView">
                     <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-zQ-dSt">
@@ -77,11 +79,13 @@
                 <constraint firstItem="bwy-y6-Ljh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5vy-Ru-mhR"/>
                 <constraint firstItem="bwy-y6-Ljh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="AJO-s6-mPG"/>
                 <constraint firstItem="hhd-5m-dix" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FF0-kR-0w0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VwA-LO-epF" secondAttribute="trailing" constant="24" id="Hs3-5P-dKq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VwA-LO-epF" secondAttribute="bottom" constant="20" id="UfD-Mr-M51"/>
+                <constraint firstItem="8m6-5O-0ye" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FhN-vL-csL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dig-De-Mtc" secondAttribute="bottom" constant="24" id="Fiy-OU-RKe"/>
+                <constraint firstItem="Dig-De-Mtc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Hfr-F2-f17"/>
+                <constraint firstItem="8m6-5O-0ye" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OPx-aW-zvZ"/>
+                <constraint firstItem="Dig-De-Mtc" firstAttribute="top" secondItem="bwy-y6-Ljh" secondAttribute="bottom" constant="40" id="UR0-IM-a2E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dig-De-Mtc" secondAttribute="trailing" constant="24" id="Uc0-zT-vpB"/>
                 <constraint firstItem="hhd-5m-dix" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YNA-VL-MO7"/>
-                <constraint firstItem="VwA-LO-epF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="iLO-5d-K85"/>
-                <constraint firstItem="VwA-LO-epF" firstAttribute="top" secondItem="bwy-y6-Ljh" secondAttribute="bottom" constant="40" id="qlm-sT-7GF"/>
             </constraints>
             <point key="canvasLocation" x="-66.412213740458014" y="20.422535211267608"/>
         </view>
@@ -89,6 +93,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -37,24 +37,24 @@ class HomeViewController: UIViewController {
         
         viewModel.viewStateDidChange = { [unowned self] state in
             
-            Task {
-                switch state {
-                case .loading:
-                    await MainActor.run {
-                        setUpViews(hidden: true)
-                        self.view.backgroundColor = .white.withAlphaComponent(0.85)
-                        self.loadingIndicator.isHidden = false
-                        self.loadingIndicator.startAnimating()
-                    }
-                case .loaded:
+            switch state {
+            case .loading:
+                
+                DispatchQueue.main.sync {
+                    setUpViews(hidden: true)
+                    self.view.backgroundColor = .white.withAlphaComponent(0.85)
+                    self.loadingIndicator.isHidden = false
+                    self.loadingIndicator.startAnimating()
+                }
+            case .loaded:
+                Task {
                     let image = await fetchImage(from:viewModel.currentJoke.icon_url)
                     await MainActor.run {
                         self.view.backgroundColor = .white
                         self.loadingIndicator.stopAnimating()
                         self.loadingIndicator.isHidden = true
-                        setUpViews(image: image ?? UIImage(named: "placeholder"), text: viewModel.currentJoke.value)
+                        setUpViews(image: image ?? UIImage(named: "placeholder"), text: self.viewModel.currentJoke.value)
                     }
-                    
                 }
             }
         }
@@ -88,7 +88,7 @@ class HomeViewController: UIViewController {
         let onMenuItemClick = { (item: UIAction) in
             self.viewModel.didSelectCategory(category: JokeCategory(rawValue: item.title) ?? .unknown)
         }
-
+        
         var categoriesMenu: [UIMenuElement] = []
         for category in JokeCategory.allCases.map({ $0.rawValue }) {
             categoriesMenu.append(UIAction(title: category, handler: onMenuItemClick))
